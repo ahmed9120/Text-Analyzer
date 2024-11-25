@@ -27,3 +27,4 @@ C:\Users\Ahmed\TextAnalyzer\obj\Debug\net9.0\refint\TextAnalyzer.dll
 C:\Users\Ahmed\TextAnalyzer\obj\Debug\net9.0\TextAnalyzer.pdb
 C:\Users\Ahmed\TextAnalyzer\obj\Debug\net9.0\TextAnalyzer.genruntimeconfig.cache
 C:\Users\Ahmed\TextAnalyzer\obj\Debug\net9.0\ref\TextAnalyzer.dll
+c:\Users\Ahmed\TextAnalyzer\obj\Debug\net9.0\TextAnalyzer.sourcelink.json

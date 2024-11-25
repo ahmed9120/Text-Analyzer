@@ -31,11 +31,15 @@ let getTextInput () =
 let analyzeText (text: string) =
     let cleanedText = cleanText text
     let words = cleanedText.Split([| ' '; '\n'; '\t' |], StringSplitOptions.RemoveEmptyEntries)
-    let sentences = text.Split([| '.'; '!' |], StringSplitOptions.RemoveEmptyEntries)
+    
+    // Use regular expression to split sentences on sentence-ending punctuation marks (., ?, !)
+    let sentences = Regex.Split(text, @"(?<=[.!?])\s+")
+    let filteredSentences = sentences |> Array.filter (fun s -> s.Trim().Length > 0)
+
     let paragraphs = text.Split([| '\n' |], StringSplitOptions.RemoveEmptyEntries)
 
     let wordCount = words.Length
-    let sentenceCount = sentences.Length
+    let sentenceCount = filteredSentences.Length
     let paragraphCount = paragraphs.Length
 
     let wordFrequency =
